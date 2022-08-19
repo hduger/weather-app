@@ -4,7 +4,8 @@
   "description": "Create a weather App using API key and async and await as well as other asycronous js",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
