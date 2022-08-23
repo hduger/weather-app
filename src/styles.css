@@ -34,3 +34,8 @@ html{
     display: flex;
     gap: 10px;
 }
+
+.high-low{
+    display: flex;
+    gap: 10px;
+}

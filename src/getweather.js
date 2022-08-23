@@ -1,5 +1,7 @@
 const displayTemp = document.querySelector('[data-temp]');
 const displayFeelsLike = document.querySelector('[data-feels-like]');
+const displayHighTemp = document.querySelector('[data-high-temp]');
+const displayLowTemp = document.querySelector('[data-low-temp]');
 
 export default async function getAPI(city) {
         const apiKey = '39376e8cea04ed893279fc479d063c5b';
@@ -25,14 +27,20 @@ export default async function getAPI(city) {
 export async function getWeather(weather) {
         const { temp } = weather.main;
         const feelsLike = weather.main.feels_like;
+        const highTemp = weather.main.temp_max;
+        const lowTemp = weather.main.temp_min;
         console.log(temp);
         console.log(feelsLike);
 
         const feelsLikeFarConversion = Math.round(1.8 * (feelsLike - 273) + 32);
         const farenConversion = Math.round(1.8 * (temp - 273) + 32);
+        const highTempConversion = Math.round(1.8 * (highTemp - 273) + 32);
+        const lowTempConversion = Math.round(1.8 * (lowTemp - 273) + 32);
         console.log(farenConversion);
         displayTemp.innerText = `Temp: ${farenConversion} ℉`;
         displayFeelsLike.innerText = `Feels Like ${feelsLikeFarConversion} ℉`;
+        displayHighTemp.innerText = `High: ${highTempConversion} ℉`;
+        displayLowTemp.innerText = `Low: ${lowTempConversion} ℉`;
 
         // const lat = await weatherData.lat;
         // console.log(lat);
