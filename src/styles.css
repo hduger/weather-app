@@ -1,0 +1,36 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+html{
+    border: 0;
+    margin: 0;
+    background-image: linear-gradient(45deg, #6FEDD6, #B9FFF8);
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.search-location, .submit{
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 500px;
+}
+
+.submit:hover{
+    cursor: pointer;
+    background-color: hsl(169, 84%, 57%);
+}
+
+.weather-info{
+    padding: 10px 0;
+    display: flex;
+    gap: 10px;
+}
